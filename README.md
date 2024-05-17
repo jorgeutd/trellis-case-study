@@ -56,8 +56,10 @@ For detailed information about the API, including endpoints, request/response fo
 To get started with the Trellis Law Document Classification project, follow these steps:
 
 1. Clone the repository:
+```
+git clone https://github.com/jorgeutd/trellis-case-study.git
 
-git@github.com:jorgeutd/trellis-case-study.git
+```
 
 2. Set up the required dependencies and environment for the API. Refer to the [API README](api/README.md) for detailed instructions.
 
