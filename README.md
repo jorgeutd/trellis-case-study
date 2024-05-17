@@ -1,35 +1,35 @@
 # Trellis Law Document Classification
 
-This repository contains the code and resources for the Trellis Law Document Classification project, which aims to develop a document classification algorithm for a dataset of text files (.txt) labeled under 11 categories: Technology, Sport, Space, Politics, Medical, Historical, Graphics, Food, Entertainment, Business, and Other. The goal is to classify these documents accurately and expose the functionality through an API.
+This repository contains the code and resources for the Trellis Law Document Classification project, which aims to develop a document classification model for a dataset of text files (.txt) labeled under 11 categories: Technology, Sport, Space, Politics, Medical, Historical, Graphics, Food, Entertainment, Business, and Other. The goal is to classify these documents accurately and expose the functionality through an API.
 
 ## Repository Structure
 
 The repository is structured as follows:
 
+```
 trellis-case-study/
-│
 ├── api/
-│   ├── app/
-│   │   ├── init.py
-│   │   ├── config.py
-│   │   ├── main.py
-│   │   ├── models.py
-│   │   └── utils.py
-│   ├── tests/
-│   │   └── test_api.py
-│   ├── Dockerfile
-│   ├── README.md
-│   └── requirements.txt
+│ ├── app/
+│ │ ├── init.py
+│ │ ├── config.py
+│ │ ├── main.py
+│ │ ├── models.py
+│ │ └── utils.py
+│ ├── tests/
+│ │ └── test_api.py
+│ ├── Dockerfile
+│ ├── README.md
+│ └── requirements.txt
 │
 ├── notebooks/
-│   ├── 00_data_preprocessing_trellis.ipynb
-│   ├── 01_training_model_v1_trellis.ipynb
-│   └── 02_model_deployment_sagemaker_endpoint_Trellis_Doc.ipynb
+│ ├── 00_data_preprocessing_trellis.ipynb
+│ ├── 01_training_model_v1_trellis.ipynb
+│ └── 02_model_deployment_sagemaker_endpoint_Trellis_Doc.ipynb
 │
 ├── data/
-│   └── training_data.csv_2024-05-17.csv
-│
+│ └── training_data.csv_2024-05-17.csv
 
+```
 
 ## Dataset
 
