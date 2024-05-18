@@ -67,11 +67,13 @@ git clone https://github.com/jorgeutd/trellis-case-study.git
 
 4. Use the provided dataset by the Trellis team or add your own dataset files to the `data/` directory.
 
-5. Train the model using the notebooks and save the trained model files to the `models/` directory.
+5. Train the model using the notebooks.
 
-6. Deploy the API using the instructions provided in the [API README](api/README.md).
+6.- Deploy fine tune model as sagemaker endpoint.
 
-7. Test the API endpoints and integrate the document classification functionality into your application.
+7. Run the API using the instructions provided in the [API README](api/README.md).
+
+8. Test the API endpoints and integrate the document classification functionality into your application.
 
 
 ## Contributing
