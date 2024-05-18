@@ -78,5 +78,5 @@ git clone https://github.com/jorgeutd/trellis-case-study.git
 
 ## Contributing
 
-Contributions to the Trellis Law Document Classification project are welcome only for current of the Trellis team! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request. Thank you Trellis team.
+Contributions to the Trellis Law Document Classification project are welcome only for current members of the Trellis team! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request. Thank you Trellis team.
 
