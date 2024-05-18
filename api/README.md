@@ -35,6 +35,16 @@ input_fn: Processes the input data from the request body. It expects the input d
 predict_fn: Generates predictions from the input data using the loaded model and tokenizer. It tokenizes the input text, passes it through the model, and returns the predicted class label. If the predicted class is not one of the existing classes, it returns "other".
 output_fn: Formats the prediction output based on the specified accept type (JSON).
 
+### Note on Inference Time and Latency
+
+The inference time for the SageMaker endpoint is typically less than 0.1 seconds, making it suitable for real-time applications. 
+
+### Scalability
+
+The SageMaker endpoint can be autoscaled using SageMaker's autoscaling feature with custom rules to handle increased load if needed. The instance on which the endpoint is deployed cost less than $0.7364 per hour, ensuring cost-effective scalability to meet varying demand. The current model and instances are capable of handling the expected load efficiently.
+
+To set up autoscaling, the Trellis team can use the AWS Management Console, AWS CLI, or AWS SDKs. 
+
 ## API Development
 The Trellis Law Document Classification API is built using the FastAPI framework in Python. It exposes a RESTful interface to allow users to submit the content of the documents input content and receive the predicted category as a response.
 
@@ -112,7 +122,7 @@ docker build -t trellis-law-document-classification-api .
 
 2.- Run the Docker container:
 
-Copy docker run -p 8000:8000 trellis-law-document-classification-api
+docker run -p 8000:8000 trellis-law-document-classification-api
 
 Access the API at http://localhost:8000 using your preferred API client or tool.
 
