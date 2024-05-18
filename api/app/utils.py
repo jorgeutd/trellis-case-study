@@ -20,9 +20,16 @@ def get_boto_session() -> boto3.Session:
     Note:
         The _DEBUG global variable controls whether to use a specific AWS profile or the default configuration.
     """
-    if _DEBUG:
-        return boto3.Session(profile_name="main", region_name="us-east-1")
-    return boto3.Session(region_name="us-east-1")
+    try:
+        if _DEBUG:
+            session = boto3.Session(profile_name=settings.aws_profile_name, region_name=settings.aws_region_name)
+        else:
+            session = boto3.Session(region_name=settings.aws_region_name)
+        logger.info("Boto3 session initialized successfully.")
+        return session
+    except Exception as e:
+        logger.error(f"Error initializing boto3 session: {e}", exc_info=True)
+        raise
 
 def clean_text_content_trellis(text_content: str) -> str:
     """
@@ -52,6 +59,7 @@ def clean_text_content_trellis(text_content: str) -> str:
     except Exception as e:
         logger.error(f"An error occurred while cleaning the text content: {e}")
         return ""
+    
 
 def invoke_sagemaker_endpoint(endpoint_name: str, text: str) -> Dict:
     """

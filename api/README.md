@@ -189,3 +189,30 @@ pytest tests/
 | ├── requirements.txt | /requirements.txt     |
 
 ```
+
+### Test Inputs and Outputs
+
+Test Input Example 1:
+```
+curl -X POST "http://localhost:8000/classify_document" -H "accept: application/json" -H "Authorization: Basic dHJlbGxpc2FkbWluOnRyZWxsaXNwYXNzd29yZDEyMw==" -H "Content-Type: application/json" -d "{\"document_text\": \"Scissor Sisters win top gig award\\n\\nNew York band Scissor Sisters have won a gig of the year award for their performance at this year's V Festival.\\n\\nThe award was voted for by listeners of Virgin Radio, which compiled a top 10 mostly dominated by newcomers on the music scene this year. The quirky disco-rock band beat The Red Hot Chili Peppers, who came second for their Hyde Park performance in June. Virgin Radio DJ Pete Mitchell said: \\\"This year has seen an amazing array of talent come into the mainstream.\\\" He added: \\\"The Scissor Sisters are one of the most original, eccentric bands to come through and it's no surprise the British public are lapping up their performances.\\\" Newcomers Keane came in third place for their August gig at the V Festival, followed by Maroon 5 and Snow Patrol.\\n\\nMusic veterans The Who and David Bowie both earned places on the list, at number eight and 10 respectively. At number seven was Oxfam's Make Fair Trade gig at London's Hammersmith Apollo in October, which featured performances by REM, Razorlight, and Coldplay's Chris Martin. Glasgow's Franz Ferdinand earned a place at number nine for their home-town performance in April. The annual survey was voted for by nearly 4,000 listeners.\"}"
+
+Response:
+
+{"message":"Classification successful","label":"entertainment"}
+
+```
+
+### Screenshots
+Here are some screenshots of the API tests and requests:
+
+#### API Test with Swagger UI
+
+![Swagger UI Test](images/local-test-FastAPI-UI.png)
+
+#### Curl Request Example
+
+![Curl Request](images/local-test-2-FastAPI-curl.png)
+
+
+### Conclusion
+This README provides comprehensive information on the Trellis Law Document Classification API, including setup, deployment, API endpoints, testing, and example inputs/outputs. For any further assistance or queries, please refer to the project documentation or contact the Trellis team.
