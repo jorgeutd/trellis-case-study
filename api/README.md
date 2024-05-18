@@ -140,8 +140,9 @@ pytest tests/
 }
 ```
 
+### API Service Structure :
 
-### Service Structure :
+```
 
 | Folder/File       | Path                     |
 |-------------------|--------------------------|
@@ -156,4 +157,6 @@ pytest tests/
 | │   ├── test_api.py| /tests/test_api.py      |
 | ├── Dockerfile    | /Dockerfile              |
 | ├── README.md     | /README.md               |
-| ├── requirements.txt | /requirements.txt      |
+| ├── requirements.txt | /requirements.txt     |
+
+```
