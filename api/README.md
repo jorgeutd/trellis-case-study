@@ -54,7 +54,6 @@ The request body for the `/classify_document` endpoint should be in JSON format 
 Success Response (200 OK):
 
 ```json
-Copy code
 {
   "message": "Classification successful",
   "label": "contract"
