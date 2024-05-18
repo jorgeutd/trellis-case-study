@@ -1,6 +1,7 @@
 import logging
-from fastapi import FastAPI, HTTPException, Depends, status
+from fastapi import FastAPI, HTTPException, Depends, status, Request
 from fastapi.security import HTTPBasic, HTTPBasicCredentials
+from fastapi.responses import JSONResponse
 from app.models import DocumentInput, ClassificationResponse
 from app.utils import invoke_sagemaker_endpoint
 from app.config import settings
