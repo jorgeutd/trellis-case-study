@@ -6,11 +6,11 @@ This repository contains the code and resources for the Trellis Law Document Cla
 The Trellis Law Document Classification API is designed to accurately classify documents into predefined categories. It utilizes a fine-tuned DistilBERT model, which has been trained on a labeled dataset of what it looks like are news documents, to provide reliable and efficient document classification functionality.
 
 ## Dataset
-The dataset used for training the document classification model consists of a collection of text files (.txt) labeled under 11 categories: Technology, Sport, Space, Politics, Medical, Historical, Graphics, Food, Entertainment, Business, and Other. The dataset can be accessed via the following link:
+The dataset used for training the document classification model consists of a collection of text files (.txt) labeled under 11 categories: Technology, Sport, Space, Politics, Medical, Historical, Graphics, Food, Entertainment, Business, and Other. The dataset was provided by the Trellis team and can be accessed via the following link:
 [Download Dataset](https://www.dropbox.com/scl/fi/nylcr21k4aw5xqmb72fgu/trellis_document_classification.zip?rlkey=1dhlovdnltg1r7pjdd9wkymo6&st=8570qec3&dl=0)
 
 ## Model Development ( Notebook 01_training_model_v1_trellis)
-The document classification model was developed by fine-tuning the DistilBERT base model on the labeled dataset provided. The fine-tuning process involved data preprocessing, model training using the Hugging Face Transformers library and its Trainer class, and evaluation using appropriate metrics. The fine-tuned model achieves high accuracy in classifying the documents content into the predefined categories.
+The document classification model was developed by fine-tuning the DistilBERT base model on the labeled dataset provided. The fine-tuning process involved data preprocessing, model training using the Hugging Face Transformers library and its Trainer class, and evaluation using appropriate metrics (F1 score and Accuracy). The fine-tuned model achieves high accuracy and F1 in classifying the documents content into the predefined categories.
 
 The fine-tuned model achieved an accuracy of 0.978 and an F1 score of 0.978 on the test set.
 
