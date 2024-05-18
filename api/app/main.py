@@ -37,7 +37,9 @@ async def authenticate(credentials: HTTPBasicCredentials = Depends(security)):
     """
     if credentials.username != VALID_CREDENTIALS["username"] or \
             credentials.password != VALID_CREDENTIALS["password"]:
+        logger.warning("Invalid credentials attempted")
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid credentials")
+    logger.info(f"User {credentials.username} authenticated successfully")
     return credentials.username
 
 @app.get("/")
@@ -59,12 +61,14 @@ async def classify_document(document: DocumentInput, username: str = Depends(aut
     Raises:
         HTTPException: If an error occurs during document classification.
     """
+    logger.info(f"Received classification request from user: {username}")
     try:
         response = invoke_sagemaker_endpoint(settings.endpoint_name, document.document_text)
         if isinstance(response, list):
             response = json.loads(response[0])
         predicted_class = response.get("predicted_class")
+        logger.info(f"Document classified successfully: {predicted_class}")
         return ClassificationResponse(message="Classification successful", label=predicted_class)
     except Exception as e:
-        logger.error(f"An error occurred during document classification: {str(e)}")
+        logger.error(f"An error occurred during document classification: {str(e)}", exc_info=True)
         raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Internal Server Error")
