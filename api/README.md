@@ -41,7 +41,7 @@ The inference time for the SageMaker endpoint is typically less than 0.1 seconds
 
 ### Scalability
 
-The SageMaker endpoint can be autoscaled using SageMaker's autoscaling feature with custom rules to handle increased load if needed. The instance on which the endpoint is deployed cost less than $0.7364 per hour, ensuring cost-effective scalability to meet varying demand. The current model and instances are capable of handling the expected load efficiently.
+The SageMaker endpoint can be autoscaled using SageMaker's autoscaling feature with custom rules to handle increased load if needed. The instance on which the endpoint was deployed cost less than $0.8 per hour, ensuring cost-effective scalability to meet varying demand. The current model and instances are capable of handling the expected load efficiently.
 
 To set up autoscaling, the Trellis team can use the AWS Management Console, AWS CLI, or AWS SDKs. 
 
@@ -99,7 +99,27 @@ Docker installed on your system
 
 ### Installation
 
+1.-  Clone this repository:
 
+```
+git clone https://github.com/jorgeutd/trellis-case-study.git
+
+```
+
+2.- Navigate to the project directory:
+
+
+```
+cd trellis-case-study
+
+```
+
+3.- Install the required dependencies on the API folder:
+
+```
+pip install -r requirements.txt
+
+```
 
 ### Error Handling and Validation
 

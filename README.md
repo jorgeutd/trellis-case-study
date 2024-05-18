@@ -42,8 +42,8 @@ The document classification model was developed by fine-tuning the DistilBERT ba
 
 The model development process is documented in the following Jupyter notebooks:
 - `notebooks/00_data_preprocessing_trellis.ipynb`: Data preprocessing tasks.
-- `notebooks/01_training_model_v1_trellis.ipynb`: Model training.
-- `notebooks/02_model_deployment_sagemaker_endpoint_Trellis_Doc.ipynb`: Deploying the model to a SageMaker endpoint.
+- `notebooks/01_training_model_v1_trellis.ipynb`: Model development & training.
+- `notebooks/02_model_deployment_sagemaker_endpoint_Trellis_Doc.ipynb`: Deploying the model to a SageMaker endpoint with custom inference script.
 
 ## API
 
@@ -63,9 +63,9 @@ git clone https://github.com/jorgeutd/trellis-case-study.git
 
 2. Set up the required dependencies and environment for the API. Refer to the [API README](api/README.md) for detailed instructions.
 
-3. Explore the Jupyter notebooks in the `notebooks/` directory to understand the model development process.
+3. Explore the Jupyter notebooks in the `notebooks/` directory to understand the model development and deployment process.
 
-4. Use the provided dataset or add your own dataset files to the `data/` directory.
+4. Use the provided dataset by the Trellis team or add your own dataset files to the `data/` directory.
 
 5. Train the model using the notebooks and save the trained model files to the `models/` directory.
 
@@ -76,5 +76,5 @@ git clone https://github.com/jorgeutd/trellis-case-study.git
 
 ## Contributing
 
-Contributions to the Trellis Law Document Classification project are welcome only for current of the Trellis team! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
+Contributions to the Trellis Law Document Classification project are welcome only for current of the Trellis team! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request. Thank you Trellis team.
 
