@@ -71,7 +71,7 @@ git clone https://github.com/jorgeutd/trellis-case-study.git
 
 5. Train the model using the notebooks.
 
-6.- Deploy fine tune model as sagemaker endpoint.
+6. Deploy fine tune model as sagemaker endpoint.
 
 7. Run the API using the instructions provided in the [API README](api/README.md).
 
