@@ -45,6 +45,8 @@ The model development process is documented in the following Jupyter notebooks:
 - `notebooks/01_training_model_v1_trellis.ipynb`: Model development & training.
 - `notebooks/02_model_deployment_sagemaker_endpoint_Trellis_Doc.ipynb`: Deploying the model to a SageMaker endpoint with custom inference script.
 
+The fine-tuned model achieved an accuracy of 0.978 and an F1 score of 0.978 on the test set.
+
 ## API
 
 The Trellis Law Document Classification API is built using the FastAPI framework in Python. It exposes a RESTful interface to allow users to submit the content of documents and receive the predicted category as a response.
